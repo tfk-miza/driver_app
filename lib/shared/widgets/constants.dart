@@ -1,0 +1,1 @@
+const double  outerPadding = 40.0;

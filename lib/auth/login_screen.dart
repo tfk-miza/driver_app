@@ -36,7 +36,7 @@ class _LoginscreenState extends State<Loginscreen> {
               const SizedBox(height: 60,),
               const SizedBox(height: 25,),
               const Text("Login as Driver", style: TextStyle(color: Colors.white,fontSize: 24),),
-              CustomTextFormFieldWidget(controller: emailController, text :"Your email" , keyboardtype: TextInputType.text,obscure: false,),
+              CustomTextFormFieldWidget(controller: emailController, text :"Your email" , keyboardtype: TextInputType.emailAddress,obscure: false,),
               const SizedBox(height: 12,),
               CustomTextFormFieldWidget(controller: pwdController, text: "Your Password", keyboardtype: TextInputType.text,obscure: true,),
                 SizedBox(

@@ -1,5 +1,6 @@
 import 'package:driver_app/auth/register_screen.dart';
 import 'package:driver_app/shared/helpers/app_helper.dart';
+import 'package:driver_app/shared/widgets/custom_text_form_field_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../screens/main_screen.dart';
@@ -35,33 +36,10 @@ class _LoginscreenState extends State<Loginscreen> {
               const SizedBox(height: 60,),
               const SizedBox(height: 25,),
               const Text("Login as Driver", style: TextStyle(color: Colors.white,fontSize: 24),),
-              TextFormField(
-                controller: emailController,
-                keyboardType: TextInputType.text,
-                decoration: const InputDecoration(
-                    hintText: "Your email",
-                    hintStyle: TextStyle(color: Colors.white, fontSize: 12),
-                    enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white)
-                    ),
-                    focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white))
-                ),
-              ),
+              CustomTextFormFieldWidget(controller: emailController, text :"Your email" , keyboardtype: TextInputType.text,obscure: false,),
               const SizedBox(height: 12,),
-              TextFormField(
-                controller: pwdController,
-                keyboardType: TextInputType.emailAddress,
-                decoration: const InputDecoration(
-                    hintText: "Your Password",
-                    hintStyle: TextStyle(color: Colors.white, fontSize: 12),
-                    enabledBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white)
-                    ),
-                    focusedBorder: UnderlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white))
-                ),
-              ),SizedBox(
+              CustomTextFormFieldWidget(controller: pwdController, text: "Your Password", keyboardtype: TextInputType.text,obscure: true,),
+                SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
                       onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (_) => const MainScreen() ));},

@@ -1,4 +1,5 @@
 import 'package:driver_app/auth/register_screen.dart';
+import 'package:driver_app/shared/helpers/app_helper.dart';
 import 'package:flutter/material.dart';
 
 import '../screens/main_screen.dart';
@@ -70,7 +71,8 @@ class _LoginscreenState extends State<Loginscreen> {
                 const SizedBox(height: 12,),
                 TextButton(
                     onPressed: (){
-                      Navigator.of(context).push(MaterialPageRoute(builder: (_) => const Registerscreen()));
+                      // Navigator.of(context).push(MaterialPageRoute(builder: (_) => const Registerscreen()));
+                      Apphelper.navigatetoscreen(context, const Registerscreen());
                     },
                     child: const Text("Don't have an account ? Create one now",style: TextStyle(color: Colors.white),)
                 ),

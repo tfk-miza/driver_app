@@ -4,6 +4,8 @@ import 'package:driver_app/shared/widgets/app_widgets.dart';
 import 'package:driver_app/shared/widgets/constants.dart';
 import 'package:flutter/material.dart';
 
+import '../shared/helpers/app_helper.dart';
+
 class Registerscreen extends StatefulWidget {
   const Registerscreen({Key? key}) : super(key: key);
 
@@ -89,14 +91,18 @@ class _RegisterscreenState extends State<Registerscreen> {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (_) => const CarDetailscreen()));},
+                    onPressed: (){
+                      // Navigator.of(context).push(MaterialPageRoute(builder: (_) => const CarDetailscreen()));
+                      Apphelper.navigatetoscreen(context, const CarDetailscreen());
+                      },
                     style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
                     child: const Text("Register Driver", style: TextStyle(color: Colors.white),)),
               ),
               const SizedBox(height: 12,),
               TextButton(
                   onPressed: (){
-                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const Loginscreen()));
+                    // Navigator.of(context).push(MaterialPageRoute(builder: (_) => const Loginscreen()));
+                    Apphelper.navigatetoscreen(context, const Loginscreen());
                   },
                   child: const Text("Already have an Account ? Log in now.",style: TextStyle(color: Colors.white),)
               ),
